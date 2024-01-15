@@ -7,7 +7,7 @@ import time
 import telebot
 from telebot import types
 
-TOKEN = '16405796321:AAEiQ5S7jCshEZmmJ5WJ-ygOuunA8AKx57E1'
+TOKEN = '6405796321:AAEiQ5S7jCshEZmmJ5WJ-ygOuunA8AKx57E'
 
 knownUsers = []  # todo: save these in a file,
 userStep = {}  # so they won't reset every time the bot restarts
@@ -20,7 +20,7 @@ commands = {  # command description used in the "help" command
 }
 
 imageSelect = types.ReplyKeyboardMarkup(one_time_keyboard=True)  # create the image selection keyboard
-imageSelect.add('Mickey', 'Minnie','Kakelay1','Kakelay2','Kakelay3','Kakelay4','Kakelay5')
+imageSelect.add('Mickey', 'Minnie','Kakelay1','Kakelay2','Kakelay3','Kakelay4','Kakelay5','Kakelay6','Kakelay7','Kakelay8','Kakelay9','Kakelay10','Kakelay11','Kakelay12','Kakelay13','Kakelay14','Kakelay15','Kakelay16','Kakelay17','Kakelay18','Kakelay19','Kakelay20')
 
 hideBoard = types.ReplyKeyboardRemove()  # if sent as reply_markup, will hide the keyboard
 
@@ -127,11 +127,56 @@ def msg_image_select(m):
     elif text == 'Kakelay5':  # Handle the new option
         bot.send_photo(cid, open('kakelay5.jpg', 'rb'), reply_markup=hideBoard)
         userStep[cid] = 0
+    elif text == 'Kakelay6':  # Handle the new option
+        bot.send_photo(cid, open('kakelay6.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0 
+    elif text == 'Kakelay7':  # Handle the new option
+        bot.send_photo(cid, open('kakelay7.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay8':  # Handle the new option
+        bot.send_photo(cid, open('kakelay8.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay9':  # Handle the new option
+        bot.send_photo(cid, open('kakelay9.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay10':  # Handle the new option
+        bot.send_photo(cid, open('kakelay10.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay11':  # Handle the new option
+        bot.send_photo(cid, open('kakelay11.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay12':  # Handle the new option
+        bot.send_photo(cid, open('kakela12.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay13':  # Handle the new option
+        bot.send_photo(cid, open('kakelay13.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay14':  # Handle the new option
+        bot.send_photo(cid, open('kakelay14.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay15':  # Handle the new option
+        bot.send_photo(cid, open('kakelay15.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay16':  # Handle the new option
+        bot.send_photo(cid, open('kakelay16.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay17':  # Handle the new option
+        bot.send_photo(cid, open('kakelay17.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay18':  # Handle the new option
+        bot.send_photo(cid, open('kakelay18.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay19':  # Handle the new option
+        bot.send_photo(cid, open('kakelay19.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+    elif text == 'Kakelay20':  # Handle the new option
+        bot.send_photo(cid, open('kakelay20.jpg', 'rb'), reply_markup=hideBoard)
+        userStep[cid] = 0
+
 
     else:
         bot.send_message(cid, "Please, use the predefined keyboard!")
         bot.send_message(cid, "Please try again")
-# kakelay copy 8.jpg
 
 # filter on a specific message
 @bot.message_handler(func=lambda message: message.text.lower() == "hi"  )
