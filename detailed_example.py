@@ -15,7 +15,7 @@ userStep = {}  # so they won't reset every time the bot restarts
 commands = {  # command description used in the "help" command
     'start'       : 'Get used to the bot',
     'help'        : 'Gives you information about the available commands',
-    'sendLongText': 'A test using the \'send_chat_action\' command',
+    'sendLongText': 'A test using the \'send_chat_action\' command  ',
     'getImage'    : 'A test using multi-stage messages, custom keyboard, and media sending'
 }
 
@@ -82,10 +82,10 @@ def command_help(m):
 @bot.message_handler(commands=['sendLongText'])
 def command_long_text(m):
     cid = m.chat.id
-    bot.send_message(cid, "If you think so...")
+    bot.send_message(cid, "If you think so... ")
     bot.send_chat_action(cid, 'typing')  # show the bot "typing" (max. 5 secs)
     time.sleep(3)
-    bot.send_message(cid, ".")
+    bot.send_message(cid,"Sure, if you ever have more questions or need assistance in the future, don't hesitate to ask. Happy coding, and have a great day!")
 
 
 # user can chose an image (multi-stage command example)
